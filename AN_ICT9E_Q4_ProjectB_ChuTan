@@ -1,101 +1,53 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
 	<title>Project B</title>	<style>
-
 		body {
-
 			background-color: #121212;
-
 			color: #fff;
-
 			font-family: Arial, sans-serif;
-
 		}
-
 		
 
 		.container {
-
 			background-color: #222;
-
 			border-radius: 10px;
-
 			padding: 20px;
-
 			margin: 50px auto;
-
 			width: 400px;
-
 			text-align: center;
-
 		}
-
 		
-
 		h1 {
-
 			color: #fff;
-
 			font-size: 24px;
-
 			margin-bottom: 20px;
-
 		}
-
-		
 
 		label {
-
 			display: block;
-
 			margin-bottom: 10px;
-
 			color: #ccc;
-
 		}
-
-		
 
 		input {
-
 			padding: 8px;
-
 			border: 1px solid #555;
-
 			border-radius: 3px;
-
 			margin-bottom: 10px;
-
 			width: 200px;
-
 			color: #fff;
-
 			background-color: #333;
-
 		}
-
 		
-
 		button {
-
 			background-color: #4c4c4c;
-
 			color: #fff;
-
 			padding: 10px 20px;
-
 			border: none;
-
 			border-radius: 3px;
-
 			cursor: pointer;
-
 			transition: background-color 0.3s ease;
-
 		}
 
 		
@@ -226,16 +178,10 @@
 
 				desiredValue = value + " " + unit.charAt(0).toUpperCase() + unit.slice(1);
 
-				
 
 				document.getElementById("convertedValue").value = convertedValue;
-
 			}
-
 		</script></center>
-
 	</div>
-
 </body>
-
 </html>
