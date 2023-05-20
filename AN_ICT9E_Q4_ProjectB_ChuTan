@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Project B</title>	<style>
+
+		body {
+
+			background-color: #121212;
+
+			color: #fff;
+
+			font-family: Arial, sans-serif;
+
+		}
+
+		
+
+		.container {
+
+			background-color: #222;
+
+			border-radius: 10px;
+
+			padding: 20px;
+
+			margin: 50px auto;
+
+			width: 400px;
+
+			text-align: center;
+
+		}
+
+		
+
+		h1 {
+
+			color: #fff;
+
+			font-size: 24px;
+
+			margin-bottom: 20px;
+
+		}
+
+		
+
+		label {
+
+			display: block;
+
+			margin-bottom: 10px;
+
+			color: #ccc;
+
+		}
+
+		
+
+		input {
+
+			padding: 8px;
+
+			border: 1px solid #555;
+
+			border-radius: 3px;
+
+			margin-bottom: 10px;
+
+			width: 200px;
+
+			color: #fff;
+
+			background-color: #333;
+
+		}
+
+		
+
+		button {
+
+			background-color: #4c4c4c;
+
+			color: #fff;
+
+			padding: 10px 20px;
+
+			border: none;
+
+			border-radius: 3px;
+
+			cursor: pointer;
+
+			transition: background-color 0.3s ease;
+
+		}
+
+		
+
+		button:hover {
+
+			background-color: #555;
+
+		}
+
+		
+
+		p {
+
+			margin-top: 20px;
+
+			font-size: 18px;
+
+			color: #ccc;
+
+		}
+
+		
+
+		.result-box {
+
+			margin-top: 20px;
+
+			border: 1px solid #555;
+
+			border-radius: 3px;
+
+			padding: 10px;
+
+			width: 300px;
+
+			text-align: initial;
+
+			background-color: #333;
+
+		}
+
+	</style>
+
+</head>
+
+<body><center>
+
+	<div class="container">
+
+		<h1>Unit Converter</h1>
+
+		<div class="result-box">
+
+			<label for="value">Type Desired value:</label>
+
+			<input type="number" id="value" name="value" placeholder="Enter value" />
+
+			<br/>
+
+			<label for="unit">Select the unit you want to convert to:</label>
+
+			<select id="unit" name="unit">
+
+				<option value="millimeters">Millimeters</option>
+
+				<option value="centimeters">Centimeters</option>
+
+				<option value="meters">Meters</option>
+
+				<option value="kilometers">Kilometers</option>
+
+			</select>
+
+			<br />
+
+			
+
+			<label>The converted value is:</label>
+
+			<input type="text" id="convertedValue" name="convertedValue" readonly />
+
+			<br />
+
+			<button onclick="convert()">Convert</button>
+
+		</div>
+
+		<script>
+
+			function convert() {
+
+				let value = document.getElementById("value").value;
+
+				let unit = document.getElementById("unit").value;
+
+				let desiredValue = "";
+
+				let convertedValue = 0;
+
+				switch(unit) {
+
+					case "millimeters":
+
+						convertedValue = value;
+
+						break;
+
+					case "centimeters":
+
+						convertedValue = value * 10;
+
+						break;
+
+					case "meters":
+
+						convertedValue = value * 1000;
+
+						break;
+
+					case "kilometers":
+
+						convertedValue = value * 1000000;
+
+						break;
+
+				}
+
+				desiredValue = value + " " + unit.charAt(0).toUpperCase() + unit.slice(1);
+
+				
+
+				document.getElementById("convertedValue").value = convertedValue;
+
+			}
+
+		</script></center>
+
+	</div>
+
+</body>
+
+</html>
